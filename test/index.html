@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pub 15 (Circular E) - Federal Income Tax (FITX) Calculator - Test</title>
+    <link href="../main.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="../pub15.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body class="text">
+    <div class="center">
+        <form name="test" id="test">
+            <div class="column">
+                Year<br />
+                <select name="year" id="year">
+                    <option selected="selected" value="2019">2019</option>
+                </select>
+            </div>
+            <div class="column">
+                &nbsp;<br />
+                <input type="submit" value="Test" />
+            </div>
+        </form>
+    </div>
+    <div class="center">
+        <div class="column w45per">
+            Failed<br />
+            <textarea id="fail"></textarea>
+        </div>
+        <div class="column w45per">
+            Passed<br />
+            <textarea id="pass"></textarea>
+        </div>
+    </div>
+</body>
+
+</html>

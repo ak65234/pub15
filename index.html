@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pub 15 (Circular E) - Federal Income Tax (FITX) Calculator</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="pub15.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body class="text">
+    <div class="center">
+        <form name="fitx" id="fitx">
+            <div class="column">
+                Year<br />
+                <select name="year" id="year">
+                    <option selected="selected" value="2019">2019</option>
+                </select>
+            </div>
+            <div class="column">
+                Pay Period<br />
+                <select name="payperiod" id="payperiod">
+                    <option value="daily">Daily</option>
+                    <option selected="selected" value="weekly">Weekly</option>
+                    <option value="biweekly">Biweekly</option>
+                    <option value="semimonthly">Semimonthly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="semiannually">Semiannually</option>
+                    <option value="annually">Annually</option>
+                </select>
+            </div>
+            <div class="column">
+                Marital Status<br />
+                <select name="married" id="married">
+                    <option selected="selected" value="0">Single</option>
+                    <option value="1">Married</option>
+                </select>
+            </div>
+            <div class="column">
+                Allowances<br />
+                <input type="text" size="3" name="allowances" id="allowances" value="0" />
+            </div>
+            <div class="column">
+                Wage/Salary<br />
+                <input type="text" size="15" name="wage" id="wage" value="0" />
+            </div>
+            <div class="column">
+                &nbsp;<br />
+                <input type="submit" value="Calculate" />
+            </div>
+        </form>
+    </div>
+    <div class="center down5 hidden" id="output">
+        <div class="column">
+            Tax - Dollar<br />
+            <input type="text" size="15" name="dollar" id="dollar" value="" />
+        </div>
+        <div class="column">
+            Tax - Cent<br />
+            <input type="text" size="15" name="cent" id="cent" value="" />
+        </div>
+    </div>
+</body>
+
+</html>

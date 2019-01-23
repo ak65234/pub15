@@ -39,8 +39,12 @@ const pub15test = {
     }
 }
 
+function clear(id){
+    document.querySelector("#" + id).value = "";
+}
+
 function log(str, id) {
-    document.querySelector("#" + id).textContent += str + '\n';
+    document.querySelector("#" + id).value += str + '\n';
 }
 
 function fail(str) {
@@ -82,6 +86,11 @@ addEventListener("load", function () {
         e.preventDefault();
 
         testYear(form.year.value);
-    })
+    }, false);
+
+    form.clear.addEventListener("click", function(e) {
+        clear("fail");
+        clear("pass");
+    }, false);
 }, false);
 

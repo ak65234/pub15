@@ -12,6 +12,7 @@ body {
 
 .column {
     display: inline-block;
+    vertical-align: top;
 }
 
 .down5 {
@@ -24,6 +25,11 @@ body {
 
 .text {
     font-size: 1em;
+}
+
+.err {
+    border: 1px solid #f00;
+    border-radius: 2px;
 }
 
 .w45per {

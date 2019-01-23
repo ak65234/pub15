@@ -48,14 +48,14 @@ const pub15 = {
         },
         per: [10, 12, 22, 24, 32, 35, 37]
     }
-}
+};
 
 function roundDollar(amount) {
     return Math.round(amount);
 }
 
 function roundCent(amount) {
-    return Math.round(.0000000001 + amount * 100) / 100;
+    return Math.round(amount * 100) / 100;
 }
 
 function calcTax(year, payperiod, married, allowances, wage) {
@@ -74,7 +74,7 @@ function calcTax(year, payperiod, married, allowances, wage) {
         if (adjustedWage > min) {
             let currentMax = (max && adjustedWage >= max) ? max : adjustedWage;
 
-            sumTax += roundCent((currentMax - min) * per / 100);
+            sumTax = roundCent(sumTax + (currentMax - min) * per / 100);
         } else {
             break;
         }

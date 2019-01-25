@@ -3,9 +3,7 @@
 addEventListener("load", function () {
     let form = document.forms.fitx;
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
+    let update = function () {
         let year = form.year.value;
         let payperiod = form.payperiod.value;
         let married = form.married.value === "1";
@@ -46,5 +44,15 @@ addEventListener("load", function () {
             document.querySelector("#cent").value = roundCent(tax);
             document.querySelector("#output").className = document.querySelector("#output").className.replace(/hidden/g, "");
         }
+    };
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        update();
+    }, false);
+
+    form.addEventListener("change", function(){
+        update();
     }, false);
 }, false);

@@ -12,8 +12,6 @@ addEventListener("load", function () {
 
         let err = false;
         if (isNaN(allowances)) {
-            form.allowances.value = "";
-
             document.querySelector("#allowancesWrapper").className = "column err";
 
             form.allowances.focus();
@@ -25,8 +23,6 @@ addEventListener("load", function () {
         }
 
         if (isNaN(wage)) {
-            form.wage.value = "";
-
             document.querySelector("#wageWrapper").className = "column err";
 
             if (!err)

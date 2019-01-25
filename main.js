@@ -8,7 +8,7 @@ addEventListener("load", function () {
         let payperiod = form.payperiod.value;
         let married = form.married.value === "1";
         let allowances = parseInt(form.allowances.value || 0);
-        let wage = parseInt(form.wage.value || 0);
+        let wage = parseFloat(form.wage.value || 0);
 
         let err = false;
         if (isNaN(allowances)) {

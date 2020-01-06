@@ -39,7 +39,7 @@ const pub15test = {
     }
 }
 
-function clear(id){
+function clear(id) {
     document.querySelector("#" + id).value = "";
 }
 
@@ -82,15 +82,14 @@ function testYear(year) {
 
 addEventListener("load", function () {
     const form = document.forms.test;
-    form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function (e) {
         e.preventDefault();
 
         testYear(form.year.value);
     }, false);
 
-    form.clear.addEventListener("click", function(e) {
+    form.clear.addEventListener("click", function (e) {
         clear("fail");
         clear("pass");
     }, false);
 }, false);
-
